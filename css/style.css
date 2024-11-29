@@ -140,3 +140,14 @@ footer {
 	align-items: center;
 	justify-content: space-around;
 }
+
+@media screen and (max-width: 768px) {
+  h2 {
+    rotate: 270deg;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 769px) {
+  
+}
