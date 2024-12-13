@@ -38,16 +38,14 @@
 body {
   margin: 0;
   color: var(--font-color);
-  overflow-x: hidden;
 }
 
 header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   height: var(--m);
   z-index: 2;
+    width: 100%;
 }
 
 #header-content {
@@ -93,7 +91,7 @@ a:hover > .underline {
 main {
   margin-top: calc(var(--m) + var(--s));
   position: relative;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -113,7 +111,7 @@ main > div {
 } 
 
 h1, h2 {
-  margin: 0 var(--s);
+  margin: var(--s);
 }
 
 #Home {
@@ -124,8 +122,13 @@ h1, h2 {
   background: var(--nord9);
 }
 
+#describtion {
+    margin: 0 15vw;
+}
+
 #Skills {
   background: var(--nord8);
+  width: 100vw;
 }
 
 #Portfolio {
@@ -141,13 +144,77 @@ footer {
 	justify-content: space-around;
 }
 
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
 @media screen and (max-width: 768px) {
-  h2 {
-    rotate: 270deg;
+    main > div {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #Home {
+        justify-content: center;
+    }
+
+    #skillset {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #describtion {
+      margin: 1rem;
+  }
+
+  #skillset ul {
+    display: none;
+  }
+  #navigation {
+    display: none;
   }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 769px) {
-  
+    .dropdown {
+        display: none;
+    }
 }
+
+#burger

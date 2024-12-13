@@ -13,22 +13,46 @@
 <body>
   <header>
     <div id="header-content">
-      <div>Logo</div>  
+      <div>Logo</div>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#Home">
+            Home
+          </a>
+          <a href="https://github.com/Julian-Beck/">
+            GitHub
+          </a>
+          <a href="https://www.codingame.com/profile/eb983bca99300251349aaf22c1ea596a6115623">
+            CodinGames
+          </a>
+          <a href="#Portfolio">
+            Portfolio
+          </a>
+          <a class="share">
+            <icon></icon>
+          </a>
+        </div>
+      </div>
       <div id="navigation">
         <a href="#Home">
           Home
           <div class="underline"></div>
         </a>
-        <a href="#AboutMe">
-          About me
+        <a href="https://github.com/Julian-Beck/">
+          GitHub
           <div class="underline"></div>
         </a>
-        <a href="#Skills">
-          Skills
+        <a href="https://www.codingame.com/profile/eb983bca99300251349aaf22c1ea596a6115623">
+          CodinGames
           <div class="underline"></div>
         </a>
         <a href="#Portfolio">
           Portfolio
+          <div class="underline"></div>
+        </a>
+        <a class="share">
+          <icon></icon>
           <div class="underline"></div>
         </a>
       </div>
@@ -41,28 +65,34 @@
     </div>
     <div id="AboutMe">
       <h2>About&nbspme</h2>
-      <p>My name is Julian Beck and I am currently studying computer science at the Stuttgart Media University</p>
+      <p id="describtion">My name is Julian Beck and I am currently studying computer science at the Stuttgart Media University</p>
     </div>
     <div id="Skills">
       <h2>Skills</h2>
       <ul id="skillset">
-        <li>C#</li>
-        <ul>
-          <li>Blazor</li>
-          <li>ASP .NET</li>
-          <li>Entity Framework</li>
-        </ul>
-        <li>Python</li>
-        <ul>
-          <li>Tkinter</li>
-          <li>OpenCV</li>
-          <li>TensorFlow</li>
-        </ul>
-        <li>Javascript</li>
-        <ul>
-          <li>Angular</li>
-          <li>Node.js</li>
-        </ul>
+        <div>
+          <li>C#</li>
+          <ul>
+            <li>Blazor</li>
+            <li>ASP .NET</li>
+            <li>Entity Framework</li>
+          </ul>
+        </div>
+        <div>
+          <li>Python</li>
+          <ul>
+            <li>Tkinter</li>
+            <li>OpenCV</li>
+            <li>TensorFlow</li>
+          </ul>
+        </div>
+        <div>
+          <li>Javascript</li>
+          <ul>
+            <li>Angular</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
       </ul>
     </div>
     <div id="Portfolio">
