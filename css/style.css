@@ -23,6 +23,10 @@
 	--bg-color: var(--nord3);
 	--highlight: var(--nord6);
 	--grad-color: linear-gradient(90deg, var(--highlight) 0%, var(--bg-color) 35%, var(--bg-color) 65%, var(--highlight) 100%);
+  
+  --font-size-s: 1rem;
+  --font-size-m: 1.5m;
+  --font-size-l: 2rem;
 
 	--xxs: 0.2rem;
 	--xs: 0.5rem;
@@ -56,16 +60,24 @@ header {
   padding: var(--s);
 }
 
+#logo {
+  font-size: large;
+  font-weight: bold;
+}
+
 #navigation {
   display: flex;
   justify-content: right;
   align-items: center;
 }
 
-#navigation > a {
+a {
   color: var(--font-color);
   text-decoration: none;
   font-weight: bold;
+}
+
+#navigation > a {
   padding: var(--xs) var(--s);
   margin: 0 var(--xs);
 }
@@ -103,11 +115,12 @@ main > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2rem;
+  font-size: var(--font-size-l);
 }
 
 #skillset {
-  columns: 3 auto;
+  columns: 4 auto;
+  width: inherit;
 } 
 
 h1, h2 {
@@ -148,7 +161,6 @@ footer {
     background-color: #3498DB;
     color: white;
     padding: 16px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
 }
@@ -164,24 +176,25 @@ footer {
 
 .dropdown-content {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100vw;
+    height:100vh;
+    left: -78vw;
+    top: calc(var(--m) + var(--s));
+    background-color: var(--bg-color);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
     padding: 12px 16px;
-    text-decoration: none;
-    display: block;
 }
 
 .dropdown a:hover {background-color: #ddd;}
 
-.show {display: block;}
+.show {display: flex;}
 
 @media screen and (max-width: 768px) {
     main > div {
@@ -212,9 +225,7 @@ footer {
 
 /* Desktop styles */
 @media screen and (min-width: 769px) {
-    .dropdown {
-        display: none;
-    }
+  .dropdown {
+    display: none;
+  }
 }
-
-#burger
